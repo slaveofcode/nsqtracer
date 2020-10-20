@@ -1,5 +1,8 @@
 # Changelog
 
+## v0.1.2
+- Ignore build dir `dist`
+
 ## v0.1.1
 - Remove darwin on build goreleaser.yml
 
