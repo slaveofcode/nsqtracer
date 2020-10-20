@@ -1,7 +1,9 @@
+<img src="https://raw.github.com/slaveofcode/nsqtracer/main/logos/logo.png" align="right" />
+
 # NSQTracer
 Simple NSQ tracer tool to see any messages that being published to specific NSQ `topic`.
 
-### How to use
+### Installation
 Simply go to the latest binary release, and run via CLI command. or by installing with `go install`
 
 ```
@@ -39,3 +41,5 @@ $ ./nsqtracer --topic TOPIC_SUBMISSION_ORDER --nsqlookup-http localhost:4161
 
 The same rule applies for the `--nsqlookup-http` option, you can also provide more than one `nsqlookupd` addresses.
 
+#### Read Available Options
+Just run `./nsqtracer --help` to see all available commands
