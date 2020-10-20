@@ -1,7 +1,9 @@
-<img src="https://raw.github.com/slaveofcode/nsqtracer/main/logos/logo.png" align="right" />
+<img src="https://raw.github.com/slaveofcode/nsqtracer/main/img/logo.png" align="right" />
 
 # NSQTracer
 Simple NSQ tracer tool to see any messages that being published to specific NSQ `topic`.
+
+<img src="https://raw.github.com/slaveofcode/nsqtracer/main/img/preview.png" align="center" />
 
 ### Installation
 Simply go to the latest binary release, and run via CLI command. or by installing with `go install`
