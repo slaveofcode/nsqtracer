@@ -86,7 +86,7 @@ func (t *Tracer) connect() error {
 			pansi.PrintErr("Error to connect to NSQ Lookups: ", err)
 			return err
 		}
-		return nill
+		return nil
 	}
 
 	if len(t.nsqdAddrs) > 0 {
@@ -95,7 +95,7 @@ func (t *Tracer) connect() error {
 			pansi.PrintErr("Error to connect to NSQds: ", err)
 			return err
 		}
-		return nill
+		return nil
 	}
 
 	// connect to default address nsq on local
