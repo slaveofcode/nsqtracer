@@ -14,15 +14,14 @@ import (
 
 var channelName = "NSQTracer"
 var topicNames []string
-var isAutoFinish bool
 var nsqLookups []string
 var nsqds []string
 
 func main() {
-	isAutoFinish = *flag.Bool("auto-finish", false, "Auto finish message after traced, by default \"false\"")
-	enableDebug := *flag.Bool("debug-log", false, "Enabling debug log message, by default \"false\"")
-	enableWarn := *flag.Bool("warning-log", false, "Enabling warning log message, by default \"false\"")
-	enableInfo := *flag.Bool("info-log", false, "Enabling info log message, by default \"false\"")
+	isAutoFinish := flag.Bool("auto-finish", false, "Auto finish message after traced, by default \"false\"")
+	enableDebug := flag.Bool("debug-log", false, "Enabling debug log message, by default \"false\"")
+	enableWarn := flag.Bool("warning-log", false, "Enabling warning log message, by default \"false\"")
+	enableInfo := flag.Bool("info-log", false, "Enabling info log message, by default \"false\"")
 	channelName = *flag.String("channel-name", "NSQTracer", "Set custom name for this NSQTracer channel subscription, by default \"NSQTracer\"")
 	ftopicNames := flags.Array("topic", "Topic name to trace, can be used multiple times")
 	fnsqds := flags.Array("nsqd-tcp", "NSQd TCP address (e.g. localhost:4150), can be used multiple times")
@@ -47,6 +46,8 @@ func main() {
 		)
 	}
 
+	fmt.Println()
+
 	var tracers []*tracer.Tracer
 	for _, t := range topicNames {
 		t := tracer.NewDefaultTracer(&tracer.TracerConfig{
@@ -54,10 +55,10 @@ func main() {
 			Channel:        channelName,
 			NSQdAddrs:      nsqds,
 			NSQLookupAddrs: nsqLookups,
-			EnableDebug:    enableDebug,
-			EnableWarn:     enableWarn,
-			EnableInfo:     enableInfo,
-			AutoFinish:     isAutoFinish,
+			EnableDebug:    *enableDebug,
+			EnableWarn:     *enableWarn,
+			EnableInfo:     *enableInfo,
+			AutoFinish:     *isAutoFinish,
 		})
 
 		if err := t.StartTrace(); err != nil {

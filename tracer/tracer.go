@@ -1,6 +1,9 @@
 package tracer
 
 import (
+	"fmt"
+	"time"
+
 	nsqio "github.com/nsqio/go-nsq"
 	"github.com/slaveofcode/nsqtracer/nsq"
 	"github.com/slaveofcode/nsqtracer/pansi"
@@ -106,6 +109,11 @@ func (t *Tracer) connect() error {
 
 func (t *Tracer) setLoggers() {
 	if t.debug {
+		pansi.PrintIcon(
+			pansi.SCyan("["+t.topic+"]"),
+			" ",
+			pansi.SWhite("Debug Msg Enabled"),
+		)
 		t.consumer.SetLogger(&nsq.DefaultLogger{
 			Name: t.topic,
 			Kind: "Debug",
@@ -113,6 +121,11 @@ func (t *Tracer) setLoggers() {
 	}
 
 	if t.info {
+		pansi.PrintIcon(
+			pansi.SCyan("["+t.topic+"]"),
+			" ",
+			pansi.SWhite("Info Msg Enabled"),
+		)
 		t.consumer.SetLogger(&nsq.DefaultLogger{
 			Name: t.topic,
 			Kind: "Info",
@@ -120,6 +133,11 @@ func (t *Tracer) setLoggers() {
 	}
 
 	if t.warn {
+		pansi.PrintIcon(
+			pansi.SCyan("["+t.topic+"]"),
+			" ",
+			pansi.SWhite("Warning Msg Enabled"),
+		)
 		t.consumer.SetLogger(&nsq.DefaultLogger{
 			Name: t.topic,
 			Kind: "Warning",
@@ -139,6 +157,10 @@ func (t *Tracer) StartTrace() error {
 		IsAutoFinish: t.autoFinish,
 	})
 	t.setLoggers()
+
+	fmt.Println()
+
+	time.Sleep(time.Second)
 
 	if err := t.connect(); err != nil {
 		return err
