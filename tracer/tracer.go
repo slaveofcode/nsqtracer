@@ -83,23 +83,25 @@ func (t *Tracer) connect() error {
 	if len(t.nsqLookupAddrs) > 0 {
 		err := t.consumer.ConnectToNSQLookupds(t.nsqLookupAddrs)
 		if err != nil {
-			pansi.PrintErr("Error connect to NSQ Lookups: ", err)
+			pansi.PrintErr("Error to connect to NSQ Lookups: ", err)
 			return err
 		}
+		return nill
 	}
 
 	if len(t.nsqdAddrs) > 0 {
 		err := t.consumer.ConnectToNSQDs(t.nsqdAddrs)
 		if err != nil {
-			pansi.PrintErr("Error connect to NSQds: ", err)
+			pansi.PrintErr("Error to connect to NSQds: ", err)
 			return err
 		}
+		return nill
 	}
 
 	// connect to default address nsq on local
 	err := t.consumer.ConnectToNSQD(defaultLocalNSQD)
 	if err != nil {
-		pansi.PrintErr("Error connect to NSQd: ", err)
+		pansi.PrintErr("Error to connect to NSQd: ", err)
 		pansi.PrintWarn("You should set at least one \"nsqd-tcp\" or \"nsqlookup-http\" address to make it work!")
 		return err
 	}
