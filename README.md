@@ -1,4 +1,4 @@
-<img src="https://raw.github.com/slaveofcode/nsqtracer/main/img/logo.png" align="right" />
+<img src="https://raw.github.com/slaveofcode/nsqtracer/main/img/logo.png" align="right" width="200" />
 
 # NSQTracer
 Simple NSQ tracer tool to see any messages that being published to specific NSQ `topic`.
