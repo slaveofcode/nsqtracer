@@ -1,5 +1,5 @@
 # NSQTracer
-Simple NSQ message tracer that very helpful to see any messages are published.
+Simple NSQ tracer tool to see any messages that being published to specific NSQ `topic`.
 
 ### How to use
 Simply go to the latest binary release, and run via CLI command. or by installing with `go install`
