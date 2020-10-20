@@ -45,3 +45,9 @@ The same rule applies for the `--nsqlookup-http` option, you can also provide mo
 
 #### Read Available Options
 Just run `./nsqtracer --help` to see all available commands
+
+
+### LICENSE
+MIT License
+
+Copyright (c) 2020 Aditya Kresna
