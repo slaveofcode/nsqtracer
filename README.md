@@ -24,21 +24,21 @@ The command above will start a tracer listening from default `nsqd` host address
 If you want to use specific address of NSQd, you can attach more options like below
 
 ```
-$ ./nsqtracer --nsqd-tcp localhost:4180
+$ ./nsqtracer --topic SOMETOPIC --nsqd-tcp localhost:4180
 ```
 
 #### Start from multiple address
 NSQTracer is able to listen from multiple `nsqd` addresses, so you can watch through all `nsqd` instances. Simply add more on the `--nsqd-tcp` options.
 
 ```
-$ ./nsqtracer --nsqd-tcp localhost:4150 --nsqd-tcp localhost:4140 --nsqd-tcp localhost:4180
+$ ./nsqtracer --topic SOMETOPIC --nsqd-tcp localhost:4150 --nsqd-tcp localhost:4140 --nsqd-tcp localhost:4180
 ```
 
 ### Using NSQLookupd address
-By using `nsqlookupd` host address you have a chance discover all `nsqd`'s that connected to the `nsqlookupd` instance, it's really helpful when you wan to listen from all `nsqd`'s by supplying only one `nsqlookupd` http address.
+By using `nsqlookupd` host address you'll discover all `nsqd`'s that connected to the `nsqlookupd` instance, it's really helpful when you wan to listen from all `nsqd`'s by supplying only one `nsqlookupd` http address.
 
 ```
-$ ./nsqtracer --topic TOPIC_SUBMISSION_ORDER --nsqlookup-http localhost:4161
+$ ./nsqtracer --topic SOMETOPIC --nsqlookup-http localhost:4161
 ```
 
 The same rule applies for the `--nsqlookup-http` option, you can also provide more than one `nsqlookupd` addresses.
