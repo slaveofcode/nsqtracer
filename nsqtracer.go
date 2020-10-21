@@ -36,13 +36,17 @@ func main() {
 		pansi.PrintWarn("No topic name is provided, please set by adding \"--topic\" option")
 	}
 
+	if *isAutoFinish {
+		pansi.PrintWarn("Auto finish message is activated")
+	}
+
 	pansi.PrintInfo("Will tracing for topic(s):")
 	for _, t := range topicNames {
 		pansi.N(
 			"  ",
 			pansi.SBlue("➜"),
 			" ",
-			pansi.SYellow(t),
+			pansi.SRed(t),
 		)
 	}
 
