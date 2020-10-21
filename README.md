@@ -1,12 +1,12 @@
 <img src="https://raw.github.com/slaveofcode/nsqtracer/main/img/logo.png" align="right" width="200" />
 
 # NSQTracer
-Simple NSQ tracer tool to see any messages that being published to specific NSQ `topic`.
+Simple NSQ tracer tool to see any messages that being published to specific NSQ `topic`. This library will not consume the message, only listening for new messages and display, that's it. However it also can consume the message by providing `--auto-finish` option, so the message will be assumed as finished.
 
 <img src="https://raw.github.com/slaveofcode/nsqtracer/main/img/preview.png" align="center" />
 
 ### Installation
-Simply go to the [latest binary release](https://github.com/slaveofcode/nsqtracer/releases), and run via CLI command. or by installing with `go install`
+Simply go to the [latest binary release](https://github.com/slaveofcode/nsqtracer/releases) page to download the binary, and then run via CLI command. or by installing via `go install`
 
 ```
 $ go install github.com/slaveofcode/nsqtracer
