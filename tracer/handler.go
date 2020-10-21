@@ -29,6 +29,7 @@ func (h *Handler) HandleMessage(msg *nsq.Message) error {
 		// not a JSON data
 		pansi.N(
 			pansi.SGreen("➜"),
+			" ",
 			pansi.SBlue("["+h.TraceName+"]"),
 			" ",
 			pansi.SMagenta("["+timeStamp+"]"),
@@ -46,6 +47,7 @@ func (h *Handler) HandleMessage(msg *nsq.Message) error {
 
 	pansi.N(
 		pansi.SGreen("➜"),
+		" ",
 		pansi.SBlue("["+h.TraceName+"]"),
 		" ",
 		pansi.SMagenta("["+timeStamp+"]"),
