@@ -35,7 +35,7 @@ $ ./nsqtracer --topic SOMETOPIC --nsqd-tcp localhost:4150 --nsqd-tcp localhost:4
 ```
 
 ### Using NSQLookupd address
-By using `nsqlookupd` host address you'll discover all `nsqd`'s that connected to the `nsqlookupd` instance, it's really helpful when you wan to listen from all `nsqd`'s by supplying only one `nsqlookupd` http address.
+By using `nsqlookupd` host address you'll discover all `nsqd`'s that connected to the `nsqlookupd` instance, it's really helpful when you want to listen from all `nsqd`'s by supplying only one `nsqlookupd` http address.
 
 ```
 $ ./nsqtracer --topic SOMETOPIC --nsqlookup-http localhost:4161
