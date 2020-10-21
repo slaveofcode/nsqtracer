@@ -17,3 +17,8 @@ vendor/
 dist/
 
 nsqtracer
+nsqtracer_linux*
+nsqtracer_darwin*
+nsqtracer_openbsd*
+nsqtracer_android*
+nsqtracer_*.exe
