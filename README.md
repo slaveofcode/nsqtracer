@@ -9,7 +9,7 @@ Simple NSQ tracer tool to see any messages that being published to specific NSQ 
 Simply go to the [latest binary release](https://github.com/slaveofcode/nsqtracer/releases) page to download the binary, and then run via CLI command. or if you has Go installed locally, NSQTracer can be installed via `go install`
 
 **Tips:**
-Place the binary on `/usr/local/bin` (for *nix users*) so it accessible anywhere in your system.
+Place the binary on `/usr/local/bin` (for *\*nix* users) so it accessible anywhere in your system.
 
 ```
 $ go install github.com/slaveofcode/nsqtracer
