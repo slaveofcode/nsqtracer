@@ -34,6 +34,7 @@ func main() {
 
 	if len(topicNames) == 0 {
 		pansi.PrintWarn("No topic name is provided, please set by adding \"--topic\" option")
+		os.Exit(0)
 	}
 
 	if *isAutoFinish {
