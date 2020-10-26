@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.1.5
+- Exit when no topic provided
+
+## v0.1.4
+- changed default to #ephemeral channel
+
 ## v0.1.3
 - Added message if auto-finish option is used
 - Update README.md content

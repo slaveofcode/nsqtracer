@@ -22,7 +22,7 @@ func main() {
 	enableDebug := flag.Bool("debug-log", false, "Enabling debug log message, by default \"false\"")
 	enableWarn := flag.Bool("warning-log", false, "Enabling warning log message, by default \"false\"")
 	enableInfo := flag.Bool("info-log", false, "Enabling info log message, by default \"false\"")
-	channelName = *flag.String("channel-name", "NSQTracer", "Set custom name for this NSQTracer channel subscription, by default \"NSQTracer\"")
+	channelName = *flag.String("channel-name", "NSQTracer#ephemeral", "Set custom name for this NSQTracer channel subscription, by default \"NSQTracer#ephemeral\"")
 	ftopicNames := flags.Array("topic", "Topic name to trace, can be used multiple times")
 	fnsqds := flags.Array("nsqd-tcp", "NSQd TCP address (e.g. localhost:4150), can be used multiple times")
 	fnsqLookups := flags.Array("nsqlookup-http", "NSQ Lookup HTTP address (e.g. localhost:4161), can be used multiple times")
